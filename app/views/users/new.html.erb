@@ -1,0 +1,12 @@
+<h1>新規ユーザー</h1>
+<%= form_for :users, url: users_path do |f| %>
+  ユーザー名<br>
+  <%= f.text_field :name %><br>
+  <label><%= f.radio_button :place, 0 %> 在室 </label>
+  <label><%= f.radio_button :place, 1 %> 教室 </label>
+  <label><%= f.radio_button :place, 2 %> 食堂 </label>
+  <label><%= f.radio_button :place, 3 %> 校内 </label>
+  <label><%= f.radio_button :place, 4 %> 帰宅 </label>
+  <br>
+  <%= f.submit %><br>
+<% end %> 
