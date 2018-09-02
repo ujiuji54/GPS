@@ -1,13 +1,5 @@
-<h1>新規ユーザー</h1>
-<%= form_for :users, url: users_path do |f| %>
-  <% if @user.errors.any? %>
-    <h2>エラーがあります</h2>
-    <% @user.errors.full_messages.each do |message| %>
-      <%= message %><br>
-    <% end %>
-  <% end %>
-  ユーザー名<br>
-  <%= f.text_field :name %><br>
+<%= form_for :users, url: user_path, method: :patch do |f| %>
+  <h1><%= @user.name %></h1>
   <label><%= f.radio_button :place, 0 %> 在室 </label>
   <label><%= f.radio_button :place, 1 %> 教室 </label>
   <label><%= f.radio_button :place, 2 %> 食堂 </label>
